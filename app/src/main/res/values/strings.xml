@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TurboJpegSample</string>
+    <string name="compress">压缩</string>
 </resources>

@@ -1,4 +1,3 @@
-
 # 最低版本
 cmake_minimum_required(VERSION 3.4.1)
 
@@ -20,13 +19,15 @@ set(SOURCE_FILES src/main/cpp/compress.c)
 add_library(compress SHARED
             ${SOURCE_FILES})
 
-
 find_library(log-lib log)
 find_library(graphics jnigraphics)
 
 add_library(libjpeg SHARED IMPORTED)
 set_target_properties(libjpeg PROPERTIES IMPORTED_LOCATION ${libjpeg_lib_dir}/${ANDROID_ABI}/libjpeg.so)
 
+#add_library(libturbojpeg SHARED IMPORTED)
+#set_target_properties(libturbojpeg PROPERTIES IMPORTED_LOCATION ${libjpeg_lib_dir}/${ANDROID_ABI}/libturbojpeg.so)
 
+#target_link_libraries(compress libjpeg libturbojpeg ${log-lib} ${graphics})
 target_link_libraries(compress libjpeg ${log-lib} ${graphics})
 

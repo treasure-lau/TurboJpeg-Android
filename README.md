@@ -1,3 +1,3 @@
-## libjpeg-turbo
+## Android MozJpeg
 
-使用 CMAKE 编译 libjpeg-turbo 进行图片压缩
+https://github.com/mozilla/mozjpeg，基于v4.0.3版本编译。编译的so库放在libjpeg/prebuilt目录下。其他部分参考：https://github.com/chendongMarch/TurboJpeg-Android
